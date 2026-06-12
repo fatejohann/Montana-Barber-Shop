@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- 1. Charset y viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 2. Título -->
+  <title>Montana Barber Shop | Barbería en San Salvador, El Salvador</title>
+
+  <!-- 3. Meta descripción -->
+  <meta name="description" content="Barbería profesional en San Salvador. Cortes clásicos, fades y arreglo de barba con técnica de alto nivel. Reservá tu cita por WhatsApp — Lun–Sáb 8am–7pm.">
+
+  <!-- 4. Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://montanabarber.com.sv/">
+  <meta property="og:title" content="Montana Barber Shop — Técnica · Estilo · Actitud">
+  <meta property="og:description" content="Barbería profesional en San Salvador. Cortes clásicos, fades y arreglo de barba. Reservá tu cita por WhatsApp.">
+  <meta property="og:image" content="https://montanabarber.com.sv/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_SV">
+  <meta property="og:site_name" content="Montana Barber Shop">
+
+  <!-- 5. Canonical -->
+  <link rel="canonical" href="https://montanabarber.com.sv/">
+
+  <!-- 6. Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- 7. Precarga de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Preload imagen hero (LCP) -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80">
+
+  <!-- 8. CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- 9. Schema.org — HairSalon (tipo más cercano disponible para barbería) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Montana Barber Shop",
+    "description": "Barbería profesional en San Salvador. Cortes clásicos, fades y arreglo de barba con técnica de alto nivel.",
+    "url": "https://montanabarber.com.sv",
+    "telephone": "+50371508903",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Salvador",
+      "addressCountry": "SV"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      }
+    ],
+    "image": "https://montanabarber.com.sv/og-image.jpg",
+    "sameAs": ["https://www.instagram.com/barberiamontana.sv"]
+  }
+  </script>
+
+  <!-- 10. Analytics placeholder (activar cuando el cliente tenga GA4) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXX');
+  </script>
+  -->
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#" class="nav__logo" aria-label="Montana Barber Shop — inicio">
+        <span class="nav__logo-main">MONTANA</span>
+        <span class="nav__logo-accent">BARBER</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="#servicios" class="nav__link">Servicios</a>
+        <a href="#galeria" class="nav__link">Galería</a>
+        <a href="#nosotros" class="nav__link">Nosotros</a>
+        <a href="#ubicacion" class="nav__link">Ubicación</a>
+      </nav>
+
+      <a href="https://wa.me/50371508903?text=Hola%20Montana%2C%20quiero%20reservar%20una%20cita"
+         class="btn btn--gold nav__cta"
+         target="_blank" rel="noopener noreferrer">
+        Reservar cita
+      </a>
+
+      <button class="nav__hamburger" id="hamburger"
+              aria-label="Abrir menú de navegación"
+              aria-expanded="false"
+              aria-controls="drawer">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- DRAWER MÓVIL -->
+  <div class="drawer" id="drawer" role="dialog" aria-label="Menú de navegación" aria-hidden="true" inert>
+    <nav class="drawer__nav" aria-label="Menú móvil">
+      <a href="#servicios" class="drawer__link">Servicios</a>
+      <a href="#galeria" class="drawer__link">Galería</a>
+      <a href="#nosotros" class="drawer__link">Nosotros</a>
+      <a href="#ubicacion" class="drawer__link">Ubicación</a>
+    </nav>
+  </div>
+  <div class="drawer__overlay" id="drawerOverlay" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero" aria-label="Montana Barber Shop — barbería premium en San Salvador">
+      <img
+        id="heroBg"
+        class="hero__bg"
+        src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1600&q=80"
+        alt="Barbero profesional dando un corte con precisión en Montana Barber Shop, San Salvador"
+        width="1600" height="1067">
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <span class="hero__tag">BARBERÍA PROFESIONAL · SAN SALVADOR</span>
+
+        <h1 class="hero__claim">
+          <span>TÉCNICA</span>
+          <span class="hero__claim--gold">ESTILO</span>
+          <span>ACTITUD.</span>
+        </h1>
+
+        <p class="hero__sub">Tu próximo corte, hecho con el oficio de quien sabe exactamente lo que hace.</p>
+
+        <div class="hero__ctas">
+          <a href="https://wa.me/50371508903?text=Hola%20Montana%2C%20quiero%20reservar%20una%20cita"
+             class="btn btn--wa"
+             target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Reservar cita
+          </a>
+          <a href="#galeria" class="btn btn--outline-gold">
+            Ver nuestro trabajo
+          </a>
+        </div>
+
+        <div class="hero__divider" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST STRIP ===== -->
+    <div class="trust-strip" role="complementary" aria-label="Indicadores de confianza">
+      <div class="container trust-strip__inner">
+        <span class="trust-strip__item">★ 4.9 Google</span>
+        <span class="trust-strip__sep" aria-hidden="true">·</span>
+        <span class="trust-strip__item">150+ clientes satisfechos</span>
+        <span class="trust-strip__sep" aria-hidden="true">·</span>
+        <span class="trust-strip__item">San Salvador</span>
+      </div>
+    </div>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section class="section" id="servicios" aria-labelledby="servicios-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="eyebrow">Nuestros Servicios</span>
+          <h2 class="section__title" id="servicios-heading">EL CORTE QUE BUSCÁS</h2>
+        </header>
+
+        <div class="services-grid">
+
+          <article class="service-card fade-up" aria-label="Corte Clásico — Desde $5">
+            <span class="service-card__num" aria-hidden="true">01</span>
+            <h3 class="service-card__name">Corte Clásico</h3>
+            <p class="service-card__desc">Tijera y máquina con acabado impecable. El corte que nunca falla.</p>
+            <span class="service-card__price">Desde $5</span>
+          </article>
+
+          <article class="service-card fade-up delay-1" aria-label="Fade y Degradado — Desde $8">
+            <span class="service-card__num" aria-hidden="true">02</span>
+            <h3 class="service-card__name">Fade &amp; Degradado</h3>
+            <p class="service-card__desc">Skin fade, low fade, high fade — el que te quede. Precisión de millímetro.</p>
+            <span class="service-card__price">Desde $8</span>
+          </article>
+
+          <article class="service-card fade-up delay-2" aria-label="Arreglo de Barba — Desde $5">
+            <span class="service-card__num" aria-hidden="true">03</span>
+            <h3 class="service-card__name">Arreglo de Barba</h3>
+            <p class="service-card__desc">Perfilado, navaja y definición de líneas. La barba que enmarca tu cara.</p>
+            <span class="service-card__price">Desde $5</span>
+          </article>
+
+          <article class="service-card fade-up delay-3" aria-label="Corte más Barba — Desde $12">
+            <span class="service-card__num" aria-hidden="true">04</span>
+            <h3 class="service-card__name">Corte + Barba</h3>
+            <p class="service-card__desc">La combinación completa. Look terminado de la cabeza a la barba.</p>
+            <span class="service-card__price">Desde $12</span>
+          </article>
+
+        </div>
+
+        <div class="section__cta">
+          <a href="https://wa.me/50371508903?text=Hola%20Montana%2C%20quiero%20reservar%20una%20cita"
+             class="btn btn--wa"
+             target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Reservar cita ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERÍA ===== -->
+    <section class="section section--bg2" id="galeria" aria-labelledby="galeria-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="eyebrow">Galería de Trabajo</span>
+          <h2 class="section__title" id="galeria-heading">EL TRABAJO HABLA</h2>
+        </header>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item gallery-item--tall fade-up">
+            <img
+              src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80"
+              alt="Barbero de Montana trabajando con precisión profesional en un corte fade"
+              width="800" height="1067"
+              loading="lazy">
+            <div class="gallery-item__hover" aria-hidden="true"></div>
+          </div>
+
+          <div class="gallery-item fade-up delay-1">
+            <img
+              src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80"
+              alt="Resultado de corte clásico en Montana Barber Shop — acabado limpio y definido"
+              width="600" height="600"
+              loading="lazy">
+            <div class="gallery-item__hover" aria-hidden="true"></div>
+          </div>
+
+          <div class="gallery-item fade-up delay-2">
+            <img
+              src="https://images.unsplash.com/photo-1593702288056-7cc0f70b1e52?w=600&q=80"
+              alt="Fade degradado de cerca — líneas precisas en Montana Barber Shop"
+              width="600" height="600"
+              loading="lazy">
+            <div class="gallery-item__hover" aria-hidden="true"></div>
+          </div>
+
+          <div class="gallery-item fade-up delay-1">
+            <img
+              src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80"
+              alt="Herramientas de barbero — tijeras y navajas profesionales de Montana"
+              width="600" height="600"
+              loading="lazy">
+            <div class="gallery-item__hover" aria-hidden="true"></div>
+          </div>
+
+          <div class="gallery-item fade-up delay-2">
+            <img
+              src="https://images.unsplash.com/photo-1512864084360-7c0d4d2d4a78?w=600&q=80"
+              alt="Interior de Montana Barber Shop — ambiente oscuro y profesional en San Salvador"
+              width="600" height="600"
+              loading="lazy">
+            <div class="gallery-item__hover" aria-hidden="true"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== POR QUÉ MONTANA ===== -->
+    <section class="section" id="nosotros" aria-labelledby="nosotros-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="eyebrow">Por Qué Montana</span>
+          <h2 class="section__title" id="nosotros-heading">MÁS QUE UN CORTE</h2>
+        </header>
+
+        <div class="pillars-grid">
+
+          <article class="pillar-card fade-up">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <!-- Scissors / precision icon -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+                <line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/>
+                <line x1="8.12" y1="8.12" x2="12" y2="12"/>
+              </svg>
+            </div>
+            <h3 class="pillar-card__title">Técnica Profesional</h3>
+            <p class="pillar-card__desc">Cada barbero domina las técnicas — desde cortes clásicos hasta fades precisos. El oficio se aprende, la perfección se practica.</p>
+          </article>
+
+          <article class="pillar-card fade-up delay-1">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <!-- Identity / person icon -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
+              </svg>
+            </div>
+            <h3 class="pillar-card__title">Tu Estilo, Tu Identidad</h3>
+            <p class="pillar-card__desc">No copiamos — interpretamos. Entendemos tu tipo de cabello y la imagen que querés proyectar. El resultado es tuyo.</p>
+          </article>
+
+          <article class="pillar-card fade-up delay-2">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <!-- Shield / attitude icon -->
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="pillar-card__title">Actitud Montana</h3>
+            <p class="pillar-card__desc">Más que una barbería — es una experiencia. Ambiente, música y atención que te hacen volver.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESEÑAS ===== -->
+    <section class="section section--bg2" id="resenas" aria-labelledby="resenas-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="eyebrow">Lo Que Dicen</span>
+          <h2 class="section__title" id="resenas-heading">CLIENTES REALES</h2>
+        </header>
+
+        <div class="reviews-grid">
+
+          <article class="review-card fade-up">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">C</div>
+              <div>
+                <span class="review-card__name">CARLOS R.</span>
+                <div class="review-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              </div>
+            </div>
+            <blockquote class="review-card__text">
+              <p>"El fade más limpio que me han hecho. Vine por el Instagram y no decepciona."</p>
+            </blockquote>
+            <span class="review-card__badge">Fade &amp; Degradado · Mayo 2026</span>
+          </article>
+
+          <article class="review-card fade-up delay-1">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">D</div>
+              <div>
+                <span class="review-card__name">DIEGO M.</span>
+                <div class="review-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              </div>
+            </div>
+            <blockquote class="review-card__text">
+              <p>"Desde que encontré Montana no voy a otro lado. La atención y el resultado son otro nivel."</p>
+            </blockquote>
+            <span class="review-card__badge">Corte + Barba · Abril 2026</span>
+          </article>
+
+          <article class="review-card fade-up delay-2">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">A</div>
+              <div>
+                <span class="review-card__name">ANDRÉS L.</span>
+                <div class="review-card__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+              </div>
+            </div>
+            <blockquote class="review-card__text">
+              <p>"Fue la primera vez que fui y ya agendé para el próximo mes. Saben lo que hacen."</p>
+            </blockquote>
+            <span class="review-card__badge">Corte Clásico · Junio 2026</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== UBICACIÓN ===== -->
+    <!-- ⚠️ PLACEHOLDER: confirmar dirección exacta con Montana y actualizar el mapa (ver PENDIENTES_DATOS.md) -->
+    <section class="section" id="ubicacion" aria-labelledby="ubicacion-heading">
+      <div class="container">
+        <header class="section__header">
+          <span class="eyebrow">Dónde Encontrarnos</span>
+          <h2 class="section__title" id="ubicacion-heading">VISITÁ LA BARBERÍA</h2>
+        </header>
+
+        <div class="location-grid">
+
+          <div class="location-info fade-up">
+            <div class="location-info__item">
+              <span class="location-info__label">Dirección</span>
+              <!-- ⚠️ PLACEHOLDER: dirección exacta pendiente de Montana -->
+              <p class="location-info__value">[Dirección exacta pendiente] · San Salvador, El Salvador</p>
+            </div>
+            <div class="location-info__item">
+              <span class="location-info__label">Horario</span>
+              <!-- ⚠️ PLACEHOLDER: confirmar horarios reales -->
+              <p class="location-info__value">Lun&ndash;Sáb: 8:00 am &ndash; 7:00 pm<br>Domingo: cerrado</p>
+            </div>
+            <div class="location-info__item">
+              <span class="location-info__label">Contacto</span>
+              <p class="location-info__value">
+                <a href="https://wa.me/50371508903?text=Hola%20Montana%2C%20quiero%20reservar%20una%20cita"
+                   class="location-info__link" target="_blank" rel="noopener noreferrer">WhatsApp +503 7150-8903</a><br>
+                <a href="https://www.instagram.com/barberiamontana.sv"
+                   class="location-info__link" target="_blank" rel="noopener noreferrer">@barberiamontana.sv</a>
+              </p>
+            </div>
+
+            <div class="location-info__ctas">
+              <a href="https://wa.me/50371508903?text=Hola%20Montana%2C%20quiero%20reservar%20una%20cita"
+                 class="btn btn--wa" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Reservar cita
+              </a>
+              <!-- ⚠️ PLACEHOLDER: reemplazar query del mapa con la dirección/lugar exacto de Montana -->
+              <a href="https://www.google.com/maps/search/?api=1&query=Montana%20Barber%20Shop%20San%20Salvador"
+                 class="btn btn--outline-gold" target="_blank" rel="noopener noreferrer">
+                Cómo llegar
+              </a>
+            </div>
+          </div>
+
+          <div class="location-map fade-up delay-1">
+            <!-- ⚠️ PLACEHOLDER: este mapa apunta a una búsqueda genérica. Reemplazar con el embed de la ubicación real de Montana. -->
+            <iframe
+              title="Ubicación de Montana Barber Shop en San Salvador"
+              src="https://www.google.com/maps?q=Montana%20Barber%20Shop%20San%20Salvador&output=embed"
+              width="600" height="450"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <!-- ⚠️ PLACEHOLDER: respuestas de ejemplo — confirmar con Montana (ver PENDIENTES_DATOS.md) -->
+    <section class="section section--bg2" id="faq" aria-labelledby="faq-heading">
+      <div class="container container--narrow">
+        <header class="section__header">
+          <span class="eyebrow">Preguntas Frecuentes</span>
+          <h2 class="section__title" id="faq-heading">ANTES DE VENIR</h2>
+        </header>
+
+        <div class="faq-list">
+
+          <details class="faq-item fade-up">
+            <summary class="faq-item__q">¿Atienden sin cita o necesito reservar?</summary>
+            <div class="faq-item__a">
+              <p>Atendemos con y sin cita, pero te recomendamos reservar por WhatsApp para asegurar tu horario y evitar la espera, sobre todo los fines de semana.</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-item__q">¿Qué formas de pago aceptan?</summary>
+            <div class="faq-item__a">
+              <p>Aceptamos efectivo y transferencia. [Confirmar con Montana si reciben tarjeta o pago por aplicación.]</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-item__q">¿Cuánto dura un corte?</summary>
+            <div class="faq-item__a">
+              <p>Un corte toma entre 30 y 45 minutos. El servicio de corte + barba puede llegar a una hora, según el estilo.</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-item__q">¿Hacen cortes para niños?</summary>
+            <div class="faq-item__a">
+              <p>Sí, atendemos a niños. Escribinos por WhatsApp y con gusto coordinamos el horario más cómodo para ustedes.</p>
+            </div>
+          </details>
+
+          <details class="faq-item fade-up">
+            <summary class="faq-item__q">¿Dónde están ubicados y hay parqueo?</summary>
+            <div class="faq-item__a">
+              <!-- ⚠️ PLACEHOLDER: confirmar zona exacta y disponibilidad de parqueo -->
+              <p>Estamos en San Salvador. [Confirmar zona exacta y si cuentan con parqueo cercano.] Tocá &laquo;Cómo llegar&raquo; en la sección de ubicación para ver el mapa.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cta-final" aria-labelledby="cta-heading">
+      <div class="cta-final__bg-text" aria-hidden="true">MONTANA</div>
+      <div class="container cta-final__content">
+        <div class="cta-final__line" aria-hidden="true"></div>
+        <h2 class="cta-final__headline" id="cta-heading">TU PRÓXIMO CORTE TE ESPERA</h2>
+        <p class="cta-final__sub">Reservá tu cita en segundos por WhatsApp.</p>
+        <a href="https://wa.me/50371508903?text=Hola%20Montana%2C%20quiero%20reservar%20una%20cita"
+           class="btn btn--wa btn--lg"
+           target="_blank" rel="noopener noreferrer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Reservar mi cita
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Información de contacto y cierre">
+    <div class="container footer__inner">
+
+      <div class="footer__brand">
+        <span class="footer__logo">MONTANA <span class="footer__logo-accent">BARBER</span></span>
+        <p class="footer__tagline">TÉCNICA · ESTILO · ACTITUD</p>
+      </div>
+
+      <div class="footer__info">
+        <div class="footer__info-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          <span>Lun–Sáb 8am–7pm · Dom cerrado</span>
+        </div>
+        <div class="footer__info-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <a href="https://maps.google.com?q=Montana+Barber+Shop+San+Salvador"
+             class="footer__link" target="_blank" rel="noopener noreferrer">
+            San Salvador, El Salvador
+          </a>
+        </div>
+        <div class="footer__info-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <a href="https://wa.me/50371508903?text=Hola%20Montana%2C%20quiero%20reservar%20una%20cita"
+             class="footer__link" target="_blank" rel="noopener noreferrer">
+            +503 7150-8903
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__social">
+        <a href="https://www.instagram.com/barberiamontana.sv"
+           class="footer__social-btn"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram @barberiamontana.sv">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+        <a href="https://wa.me/50371508903"
+           class="footer__social-btn"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="WhatsApp +503 7150-8903">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p class="footer__copy">
+          © 2026 Montana Barber Shop · Sitio web por
+          <a href="#" class="footer__copy-link">LPZ</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== WhatsApp flotante ===== -->
+  <a href="https://wa.me/50371508903?text=Hola%20Montana%2C%20me%20interesa%20reservar%20una%20cita"
+     class="wa-float"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Reservar cita por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
